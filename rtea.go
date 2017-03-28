@@ -23,7 +23,7 @@ type rtea struct {
 func NewCipher(key []byte) (cipher.Block, error) {
 	l := len(key)
 	if l%4 != 0 {
-		return nil, KeySizeError(l)
+		return nil, KeySizeError
 	}
 	c := rtea{}
 	c.key = make([]uint32, l/4)
