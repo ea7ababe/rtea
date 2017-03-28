@@ -19,7 +19,7 @@ type rtea struct {
 }
 
 // Creates a new RTEA cipher instance with a given key.
-// The key must be dividable by 4.
+// The key length must be dividable by 4.
 func NewCipher(key []byte) (cipher.Block, error) {
 	l := len(key)
 	if l%4 != 0 {
